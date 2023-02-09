@@ -1,0 +1,2 @@
+A1: pureza de G1 = 8/12; pureza de G2 = 3/6 = 1/2; pureza de G3 = 3/3 = 1;
+    pureza global = (12*8/12 + 6*3/6 + 3/3*3)/21 = (8 + 3 + 3)/21 = 14/21
