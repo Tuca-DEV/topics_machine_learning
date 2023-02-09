@@ -1,6 +1,8 @@
 function main()
   caminho = 'ruspini.m'
 
-  norm_linear(caminho)
+  matrizNormalizada = norm_linear(caminho);
+
+  kmeans(4, matrizNormalizada)
 
 endfunction
