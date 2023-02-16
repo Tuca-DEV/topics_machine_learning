@@ -1,6 +1,6 @@
 function [matriz_normalizada] = norm_linear(caminho)
 
-    matriz = load(caminho)
+    matriz = load(caminho);
 
     [l, c] = size(matriz);
 
