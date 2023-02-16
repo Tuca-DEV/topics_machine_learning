@@ -1,17 +1,10 @@
 function kmeans(n, matrix)
   [l,c] = size(matrix);
   seeds = rand(n,c); %Geração das sementes
-  m_pert = zeros(l,n); %Matriz de pertinências
   class = zeros(1, l); %Vetor que armazena a classificação de cada objeto i
 
-  figure(1);
-  plot(seeds(:,1), seeds(:,2),'ro');
-  axis([0 1 0 1]); drawnow;
-  hold on;
-  plot(matrix(:,1),matrix(:,2), 'b*');
-  drawnow; hold on;
-  for c = 1:15
-
+  for c = 1:10
+     m_pert = zeros(l,n); %Matriz de pertinências resetada
 
      %Cálculo das distâncias entre os indivíduos dos centróides e classificação final
      class = dist_class(matrix, seeds, l, n);
