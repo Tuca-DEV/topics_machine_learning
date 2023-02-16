@@ -2,8 +2,7 @@ function [matriz_normalizada] = norm_linear(caminho)
 
     matriz = load(caminho)
 
-    l = size(matriz, 1)
-    c = size(matriz, 2)
+    [l, c] = size(matriz);
 
     for j = 1:c
       minimo = min(matriz(:, j));
