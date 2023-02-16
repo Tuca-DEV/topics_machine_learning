@@ -1,7 +1,7 @@
 
 function [class] = dist_class (matrix, seeds, l, n)
 
-  for i = 1:10
+  for i = 1:l
        m_dist = inf(1, n);
 
        for s = 1:n
