@@ -12,7 +12,8 @@ function main()
   matrizNormalizada = norm_linear(caminho_base);
 
   %10 execuções do K-means e do cálculo da pureza global
-  for i = 1:1
+  %Mudar i de 10 para 1 execuções caso necessite visualizar a plotagem
+  for i = 1:10
     m_pert = kmeans(k, matrizNormalizada);
     purezas(i) = pureza(m_pert, caminho_rotulo, k);
     purezas(i)*100

@@ -3,6 +3,12 @@ function [m_pert] = kmeans(n, matrix)
   seeds = rand(n,c); %Geração das sementes
   class = zeros(1, l); %Vetor que armazena a classificação de cada objeto i
 
+  %Plotagem da primeira posição dos centróides (Bolinha)
+  figure(1);
+  plot(seeds(:,1), seeds(:,2),'ro');
+  axis([0 1 0 1]); drawnow;
+  hold on;
+
   for c = 1:10
      m_pert = zeros(l,n); %Matriz de pertinências resetada
 
@@ -20,30 +26,27 @@ function [m_pert] = kmeans(n, matrix)
 
   endfor
 
-  figure(1);
-  plot(seeds(:,1), seeds(:,2),'ro');
-  axis([0 1 0 1]); drawnow;
-  hold on;
+   %Plotagem da última posição dos centróides (Marca X)
+  plot(seeds(:,1), seeds(:,2),'rx');
+  drawnow; hold on;
+  %Plotagem com coloração determinada pelo grupo no qual se encontra os indivíduos da base de dados
   for i = 1:size(m_pert, 1)
     [~, c] = max(m_pert(i, :));
     switch(c)
       case 1
         cor = 'b*';
-        break;
       case 2
         cor = 'g*';
-        break;
       case 3
         cor = 'y*';
-        break;
       case 4
         cor = 'm*';
-        break;
       otherwise
         disp('ERRO')
     endswitch
     plot(matrix(i,1),matrix(i,2), cor);
     drawnow; hold on;
   endfor
+
 
 endfunction
