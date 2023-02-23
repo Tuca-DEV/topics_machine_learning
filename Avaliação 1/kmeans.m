@@ -1,4 +1,4 @@
-function kmeans(n, matrix)
+function [m_pert] = kmeans(n, matrix)
   [l,c] = size(matrix);
   seeds = rand(n,c); %Geração das sementes
   class = zeros(1, l); %Vetor que armazena a classificação de cada objeto i
@@ -25,5 +25,5 @@ function kmeans(n, matrix)
   axis([0 1 0 1]); drawnow;
   hold on;
   plot(matrix(:,1),matrix(:,2), 'b*');
-  drawnow; hold on;
+  drawnow; hold off;
 endfunction
