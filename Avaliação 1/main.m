@@ -3,7 +3,7 @@ function main()
   %inicialização
   k = 4;
   purezas = zeros(1, 10);
-  n_rep = 10; %Número de repetições
+  n_rep = 1; %Número de repetições
 
   %diretórios da base de dados e dos rótulos
   caminho_base = 'ruspini.m'
