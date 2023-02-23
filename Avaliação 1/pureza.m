@@ -1,5 +1,5 @@
 function [pureza_glob] = pureza(m_pert, caminho, k)
-  rotulos = load(caminho)
+  rotulos = load(caminho);
   m_cont = zeros(k, k);
   pureza_loc = zeros(1, k);
   pureza_glob = 0;
@@ -11,11 +11,8 @@ function [pureza_glob] = pureza(m_pert, caminho, k)
   endfor
 
   for i = 1:k
-    pureza_loc(i) = max(m_cont(i, :))/ sum(m_cont(i, :))
+    pureza_loc(i) = max(m_cont(i, :))/ sum(m_cont(i, :));
     pureza_glob += pureza_loc(i)*sum(m_cont(i, :))/length(rotulos);
   endfor
-
-  m_cont
-  m_pert
 
 endfunction

@@ -12,7 +12,12 @@ function [seeds] = new_position (m_pert, seeds, matrix, l , n)
          indiv++;
       endif
     endfor
-    seeds(j, 1) = x/indiv;
-    seeds(j, 2) = y/indiv;
+    if(indiv == 0)
+      disp('Sem indivíduos')
+    else
+      seeds(j, 1) = x/indiv;
+      seeds(j, 2) = y/indiv;
+    endif
+
   endfor
 endfunction
