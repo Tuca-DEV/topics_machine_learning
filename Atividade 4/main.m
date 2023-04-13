@@ -5,7 +5,4 @@ function main()
 
   knn(1, base, rotulos, objetos);
 
-  %Código para plotar os pontos
-
-
 endfunction

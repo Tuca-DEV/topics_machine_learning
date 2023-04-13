@@ -1,5 +1,6 @@
 function knn(k, base, rotulos, obj_ent)
   %k: número de classes e número de objetos mais próximos do objeto de entrada que o definirão
+  %base: base total de dados a serem para treinamen
 
   for n_obj = 1:length(obj_ent)
     distancias = zeros(length(rotulos), 1);
