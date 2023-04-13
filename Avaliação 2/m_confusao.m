@@ -16,7 +16,7 @@ function [m] = m_confusao (classificados, rotulos)
         FP++;
       endif
     else
-      if(classificados(i) == 0)
+      if(classificados(i) == rot_teste(i))
         TN++;
       else
         FN++;
